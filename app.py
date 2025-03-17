@@ -6,8 +6,11 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 from langchain_ollama import OllamaLLM
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
+
 
 # Load local model
 llm = OllamaLLM(model="gemma:2b")
